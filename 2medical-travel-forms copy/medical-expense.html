@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical & Travel Expense Request</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/medical-expense.css">
+</head>
+<body>
+    <div class="form-container">
+        <!-- Header -->
+        <header class="form-header">
+            <div class="logo-address">
+                <img src="https://www.iwh.on.ca/sites/iwh/files/styles/bootstrap_6_col_wide/public/wcbmanitoba_logo.png?h=3aaa30b7&itok=IHgQ4PBt" alt="WCB Logo" class="logo">
+                <div class="address">
+                    <p>333 Broadway</p>
+                    <p>Winnipeg, MB R3C 4W3</p>
+                    <p>Phone: (204) 954-4321</p>
+                    <p>Toll Free: 1-855-954-4321</p>
+                    <p>wcb.mb.ca</p>
+                </div>
+            </div>
+            <div class="form-title">
+                <h1>Medical & Travel Expense Request</h1>
+            </div>
+        </header>
+
+        <!-- Form Content -->
+        <div class="form-content">
+            <div class="claim-info">
+                <p>Claim No. <span id="claimNumber">20042047</span></p>
+                <p>Worker App ID: <span id="workerAppId">712041</span></p>
+                <p>Submitted: <span id="submissionDate">March 28, 2024 20:43</span></p>
+                <p class="page-number">Page <span id="currentPage">1</span> of <span id="totalPages">2</span></p>
+            </div>
+
+            <div class="intro-text">
+                <p><span id="workerName">Madeleine Willson</span> requested reimbursement for the following medical and/or travel expenses:</p>
+            </div>
+
+            <!-- Prescription Drugs Section -->
+            <div class="expense-section">
+                <h2>Prescription Drugs</h2>
+                <table id="prescriptionDrugsTable" class="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Prescription Date</th>
+                            <th>Date Purchased</th>
+                            <th>Healthcare Provider Name</th>
+                            <th>Paid Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Over-the-Counter Drugs Section -->
+            <div class="expense-section">
+                <h2>Over-the-Counter Drugs</h2>
+                <table id="otcDrugsTable" class="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Drug Name</th>
+                            <th>Date Purchased</th>
+                            <th>Paid Amount</th>
+                            <th>Seller's Name</th>
+                            <th>Reason for Purchasing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Medical Supplies Section -->
+            <div class="expense-section">
+                <h2>Bandages, Braces or Other Medical Supplies</h2>
+                <table id="medicalSuppliesTable" class="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Item Purchased</th>
+                            <th>Date Purchased</th>
+                            <th>Was this Prescribed?</th>
+                            <th>Healthcare Provider Name</th>
+                            <th>Paid Amount</th>
+                            <th>Seller's Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Parking Section -->
+            <div class="expense-section">
+                <h2>Parking for Medical Appointments</h2>
+                <table id="parkingTable" class="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Appointment Date</th>
+                            <th>Address of Healthcare Provider/Medical Facility</th>
+                            <th>Paid Amount</th>
+                            <th>Meter Used?</th>
+                            <th>Meter Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mileage Section -->
+            <div class="expense-section">
+                <h2>Mileage to Medical Appointments</h2>
+                <p class="note">The WCB will generally reimburse only those transportation costs which are in excess of costs that would be incurred by the worker while travelling to and from work.</p>
+                <table id="mileageTable" class="expense-table">
+                    <thead>
+                        <tr>
+                            <th>Appointment Date</th>
+                            <th>Address of Healthcare Provider/Medical Facility</th>
+                            <th>Address of Workplace</th>
+                            <th>Number of km (Round Trip)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamically populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Page 2 content - will be shown/hidden based on pagination -->
+            <div id="page2Content" class="page-content" style="display: none;">
+                <div class="claim-info">
+                    <p>Worker App ID: <span>712041</span></p>
+                    <p>Submitted: <span>March 28, 2024 20:43</span></p>
+                    <p class="page-number">Page <span>2</span> of <span>2</span></p>
+                </div>
+
+                <!-- Bus or Taxi Section -->
+                <div class="expense-section">
+                    <h2>Bus or Taxi Fare for Medical Appointments*</h2>
+                    <p class="note">*Note: Pre-approval is required from your WCB representative to claim taxi fare(s).</p>
+                    <table id="busOrTaxiTable" class="expense-table">
+                        <thead>
+                            <tr>
+                                <th>Appointment Date</th>
+                                <th>Address of Starting Point</th>
+                                <th>Address of Healthcare Provider/Medical Facility</th>
+                                <th>Bus or Taxi (indicate one)</th>
+                                <th>Total Fare Paid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamically populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Privacy Notice -->
+                <div class="privacy-notice">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="privacyCheckbox" checked disabled>
+                        <span class="checkmark"></span>
+                        I understand that the Privacy Notice applies to the personal information collected in this document.
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="form-footer">
+            <div class="pagination">
+                <button id="prevPage" class="page-btn" disabled>Previous Page</button>
+                <span id="pageIndicator">Page 1 of 2</span>
+                <button id="nextPage" class="page-btn">Next Page</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Data Controls for Demo -->
+    <div class="data-controls">
+        <h3>Demo Controls</h3>
+        <button id="loadSmallDataset">Load Small Dataset</button>
+        <button id="loadLargeDataset">Load Large Dataset</button>
+    </div>
+
+    <script src="js/medical-expense-data.js"></script>
+    <script src="js/medical-expense.js"></script>
+</body>
+</html>

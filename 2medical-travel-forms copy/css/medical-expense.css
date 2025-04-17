@@ -1,0 +1,101 @@
+/* Specific styles for Medical & Travel Expense Request form */
+
+.intro-text {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2c5282;
+  background-color: #ebf8ff;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #3182ce;
+}
+
+.privacy-notice {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #e6fffa;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #38b2ac;
+}
+
+.privacy-notice .checkbox-container {
+  color: #2c7a7b;
+}
+
+/* Color variations for different expense sections */
+.expense-section:nth-child(odd) {
+  background-color: #f0f9ff;
+  border-left: 4px solid #3182ce;
+}
+
+.expense-section:nth-child(even) {
+  background-color: #f0fff4;
+  border-left: 4px solid #38a169;
+}
+
+.expense-section:nth-child(3n) {
+  background-color: #fff5f7;
+  border-left: 4px solid #e53e3e;
+}
+
+.expense-section:nth-child(4n) {
+  background-color: #faf5ff;
+  border-left: 4px solid #805ad5;
+}
+
+/* Section header color variations */
+.expense-section:nth-child(odd) h2 {
+  color: #2b6cb0;
+  border-bottom: 2px solid #bee3f8;
+}
+
+.expense-section:nth-child(even) h2 {
+  color: #2f855a;
+  border-bottom: 2px solid #c6f6d5;
+}
+
+.expense-section:nth-child(3n) h2 {
+  color: #c53030;
+  border-bottom: 2px solid #fed7d7;
+}
+
+.expense-section:nth-child(4n) h2 {
+  color: #6b46c1;
+  border-bottom: 2px solid #e9d8fd;
+}
+
+/* Table header color variations */
+.expense-section:nth-child(odd) .expense-table th {
+  background-color: #3182ce;
+}
+
+.expense-section:nth-child(even) .expense-table th {
+  background-color: #38a169;
+}
+
+.expense-section:nth-child(3n) .expense-table th {
+  background-color: #e53e3e;
+}
+
+.expense-section:nth-child(4n) .expense-table th {
+  background-color: #805ad5;
+}
+
+/* Responsive adjustments for tables */
+@media (max-width: 768px) {
+  .expense-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .form-header {
+    flex-direction: column;
+  }
+
+  .form-title h1 {
+    text-align: left;
+    margin-top: 15px;
+  }
+}
